@@ -11,7 +11,7 @@ import Bubble from "./Bubble";
 const SideBarActionButton = ({ text, icon, onClick }) => {
   return (
     <div
-      className="mx-1 py-3 flex flex-col justify-center items-center space-y-1 rounded-lg hover:bg-white/20 cursor-pointer background-color-trans"
+      className="mx-1 py-3 flex flex-col justify-center items-center space-y-1 rounded-lg dark:hover:bg-white/20 cursor-pointer background-color-trans"
       onClick={onClick}
     >
       {icon}
@@ -101,7 +101,7 @@ export const SideBarExpanded = () => {
   const [selected, setSelected] = React.useState(0);
 
   return (
-    <sidebar id="sidebar-ex" className="flex-none w-[14rem] min-h-0 pr-3 h-full overflow-y-scroll hidden">
+    <aside id="sidebar-ex" className="flex-none w-[14rem] min-h-0 pr-3 h-full overflow-y-scroll hidden">
       <div className="my-3 w-full px-3">
         {SIDEBAR_BUTTONS.map(({ text, icon, iconSelected }, i) => (
           <Bubble
@@ -134,7 +134,7 @@ export const SideBarExpanded = () => {
           ))}
         </div>
       </div>
-    </sidebar>
+    </aside>
   );
 };
 
@@ -142,7 +142,7 @@ export function SideBar() {
   const [selected, setSelected] = React.useState(0);
 
   return (
-    <sidebar id="sidebar" className="flex-none w-[72px] h-full transition-transform duration-200">
+    <aside id="sidebar" className="flex-none w-[72px] h-full transition-transform duration-200">
       <div className="mt-2 flex flex-col items-stretch">
         {SIDEBAR_BUTTONS.map(({ text, icon, iconSelected }, i) =>
           i === selected ? (
@@ -157,6 +157,6 @@ export function SideBar() {
           )
         )}
       </div>
-    </sidebar>
+    </aside>
   );
 }

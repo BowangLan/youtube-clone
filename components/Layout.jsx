@@ -1,6 +1,7 @@
 import React from "react";
 import { MenuIcon, NotificationIcon, VideoCallIcon } from "../components/Icon";
 import UserAvatar from "../components/UserAvatar";
+import SearchBar from "../components/SearchBar";
 
 const avatar_url_demo =
   "https://yt3.ggpht.com/AhgGhww-nSkzcGg_upMHalc97ths0H04z-q_hATjHQPdg40W455l3SlNBuw9Z4JCdOXRxF70Fw=s88-c-k-c0x00ffffff-no-rj";
@@ -33,7 +34,9 @@ const NavBar = () => {
       </div>
 
       {/* Middle */}
-      <div className="flex-1 flex items-center"></div>
+      <div className="flex-1 flex items-center justify-center">
+        <SearchBar />
+      </div>
 
       {/* Right */}
       <div className="mr-6 flex-none flex items-center gap-3">

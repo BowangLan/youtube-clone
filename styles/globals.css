@@ -5,14 +5,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-  --custom-black: #0F0F0F;
-  --custom-white: #F1F1F1;
+  --black: #0F0F0F;
+  --white: #F1F1F1;
+  --page-bg: var(--black);
+  --searchbar-input-bg: #121212;
+  --searchbar-border-color: hsla(0, 0%, 53.3%, 0.4);
+  --searchbar-border-color-focused: #1c62b9;
+  --searchbar-right-icon-bg: rgba(255, 255, 255, 0.14);
 }
 
 html {
   width: 100vw;
   height: 100vh;
-  background-color: var(--custom-black);
+  background-color: var(--black);
+  font-family: 'Roboto', sans-serif;
+  color: #F1F1F1;
 }
 
 body,
@@ -22,8 +29,6 @@ body,
 }
 
 * {
-  font-family: 'Roboto', sans-serif;
-  color: #F1F1F1;
 }
 
 main {
@@ -34,7 +39,7 @@ main {
 .icon {
   width: 24px;
   height: 24px;
-  color: var(--custom-white);
+  color: var(--white);
 }
 
 .background-color-trans {
@@ -49,6 +54,9 @@ main {
   font-weight: 300;
 }
 
+.text-custom-white {
+  color: var(--white);
+}
 
 /* toggle menu */
 
@@ -68,4 +76,26 @@ main {
 
 #show-menu-checkbox:not(:checked) + #sidebar {
   display: block;
+}
+
+
+/* search bar */
+
+.searchbar-input-container {
+  border: 1px solid var(--searchbar-border-color);
+  background: var(--searchbar-input-bg);
+}
+
+.searchbar-input {
+  background: transparent;
+}
+
+.searchbar-right-icon {
+  padding-left: 20px;  
+  padding-right: 20px;
+  border-top: 1px solid var(--searchbar-border-color);
+  border-bottom: 1px solid var(--searchbar-border-color);
+  border-right: 1px solid var(--searchbar-border-color);
+  background-color: var(--searchbar-right-icon-bg);
+  color: var(--white);
 }

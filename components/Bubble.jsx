@@ -3,7 +3,7 @@ import React from "react";
 const Bubble = ({ left, text, right, onClick, selected }) => {
   return (
     <div
-      className={`px-3 py-2 flex items-center space-x-5 rounded-lg hover:bg-white/20 cursor-pointer ${
+      className={`px-3 py-2 flex items-center space-x-5 rounded-lg dark:hover:bg-white/20 cursor-pointer ${
         selected ? "selected-text" : "unselected-text"
       }`}
       onClick={onClick}

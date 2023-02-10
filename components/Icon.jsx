@@ -4,12 +4,15 @@ import {
   MdVideoCall,
   MdOutlineNotificationsNone,
 } from "react-icons/md";
+import { VscHistory } from "react-icons/vsc"
+import { TfiSearch } from "react-icons/tfi";
+
 
 export const HoverIconContainer = ({ children, className = "", onClick }) => {
   return (
     <span
       className={
-        "h-10 w-10 flex justify-center items-center rounded-full hover:bg-white/20 cursor-pointer background-color-trans" +
+        "h-10 w-10 flex justify-center items-center rounded-full dark:hover:bg-white/20 cursor-pointer background-color-trans" +
         className
       }
       onClick={onClick}
@@ -46,3 +49,15 @@ export const NotificationIcon = ({ onClick }) => {
     </HoverIconContainer>
   );
 };
+
+export const SearchIcon = () => {
+  return <TfiSearch className="w-5 h-5" />;
+};
+
+export const SearchIconSmall = () => {
+  return <TfiSearch className="w-4 h-4" />;
+}
+
+export const HistoryIcon = () => {
+  return <VscHistory className="w-5 h-5" />;
+}
