@@ -1,7 +1,8 @@
 import React from "react";
 
 export const ListContainer = ({ children }) => {
-  return <div className="my-3 flex gap-3">{children}</div>;
+  return <div className="relative w-full overflow-hidden my-3 flex gap-3">
+    {children}</div>;
 };
 
 export const Item = ({ text, onClick, selected }) => {

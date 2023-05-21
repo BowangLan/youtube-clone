@@ -12,6 +12,9 @@
   --searchbar-border-color: hsla(0, 0%, 53.3%, 0.4);
   --searchbar-border-color-focused: #1c62b9;
   --searchbar-right-icon-bg: rgba(255, 255, 255, 0.14);
+  --video-card-img-border-radius: 0.8rem;
+  --video-card-description-color: #aaa;
+  --video-card-title-color: rgb(241, 241, 241);
 }
 
 html {
@@ -98,4 +101,34 @@ main {
   border-right: 1px solid var(--searchbar-border-color);
   background-color: var(--searchbar-right-icon-bg);
   color: var(--white);
+}
+
+/* Video Card */
+
+.video-card-list-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.video-card-container {
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-card-container > .video-card-img-container {
+  position: relative;
+  width: 100%;
+  /* object-fit: cover; */
+}
+
+.video-card-container > .video-card-img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--video-card-img-border-radius);
+}
+
+.dot-before::before {
+  content: "•";
+  margin: 0 4px;
 }
